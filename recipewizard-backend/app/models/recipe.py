@@ -1,4 +1,5 @@
 from app.extensions import db
+from sqlalchemy_utils import JSONType
 
 
 recipe_ingredients = db.Table(
@@ -26,6 +27,7 @@ class Recipe(db.Model):
         secondaryjoin="Ingredient.id == recipe_ingredients.c.ingredient_id",
         lazy="dynamic",
     )
+    steps = db.Column(JSONType)
 
     def __repr__(self):
         return f"<Recipe {self.name}>"

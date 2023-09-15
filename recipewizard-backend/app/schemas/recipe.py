@@ -3,7 +3,6 @@ from app.models.ingredient import Ingredient
 from app.models.recipe import Recipe
 from marshmallow import fields, validate
 
-
 allowed_units = ["qty", "tsp", "tbsp", "ml", "l", "g", "kg", "cup", "oz", "lb"]
 
 
@@ -33,3 +32,4 @@ class RecipeSchema(ma.Schema):
     prep_time = fields.Str()
     servings = fields.Int()
     ingredients = fields.List(fields.Nested(IngredientSchema))
+    steps = fields.Dict()

@@ -30,6 +30,7 @@ def index():
         prep_time = request.json["prep_time"]
         servings = request.json["servings"]
         calories = request.json["calories"]
+        steps = request.json["steps"]
         new_ingredients = []
 
         for ingredient in request.json["ingredients"]:
@@ -57,7 +58,7 @@ def index():
                 new_ingredients.append(new_ingredient)
 
         new_recipe = Recipe(
-            name=name, prep_time=prep_time, servings=servings, calories=calories
+            name=name, prep_time=prep_time, servings=servings, calories=calories, steps=steps
         )
         new_recipe.ingredients.extend(new_ingredients)
         db.session.add(new_recipe)
