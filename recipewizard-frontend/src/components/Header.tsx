@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 
 const Header: FC = () => {
   return (
@@ -14,6 +14,11 @@ const Header: FC = () => {
             alt='RecipeWizard'
           />
         </Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href='#home'>Home</Nav.Link>
+          <Nav.Link href='#recipes'>Recipes</Nav.Link>
+          <Nav.Link href='#submit'>Submit Recipe</Nav.Link>
+        </Nav>
       </Container>
     </Navbar>
   );

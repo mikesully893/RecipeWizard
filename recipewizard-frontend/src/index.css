@@ -61,6 +61,18 @@ h3.headline {
   margin-right: -20px;
   margin-top: -30px;  
 }
+.recipe-carousel {
+  margin-left: -10rem;
+  margin-right: -10rem;
+  overflow: hidden;
+  height: 400px;
+}
+.recipe-carousel-caption {
+  margin-top: -400px;
+}
+.recipe-carousel-image {
+  margin-top: -600px;
+}
 .recipes-list-table-container {
   max-width: 100%;
   height: 500px;

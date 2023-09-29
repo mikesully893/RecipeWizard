@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import IRecipeData from '../types/Recipe';
 import { getRecipes } from '../services/recipe-service';
 import RecipeList from '../components/RecipeList';
+import RecipeCarousel from '../components/RecipeCarousel';
 
 
 const HomePage: FC = () => {
@@ -15,6 +16,7 @@ const HomePage: FC = () => {
 
     return (
         <div>
+            <RecipeCarousel />
             {recipes && <RecipeList recipes={recipes}/>}
         </div>
     );
